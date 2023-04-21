@@ -38,13 +38,9 @@ application {
     withAdminUi true
   }
 
-  entities Cliente, Control, Divisa, Clasificaciones, Idioma, Pais, Producto, ProductoControles, TipoCliente
+  entities *
 }
 
-/**
- * The Entity entity.
- * @author A true hipster
- */
 entity Traduccion {
   texto String required maxlength(150)
 }
@@ -59,18 +55,15 @@ entity Control {
   nombre String
   descripcion String
 }
+
+entity Provincia {
+  codigoProvincia String required maxlength(3)
+  nombreProvincia String required maxlength(30)
+}
+
 entity Divisa {
   codigoDivisa String required maxlength(3)
   nombreDivisa String required maxlength(100)
-}
-
-/**
- * The Entity entity.
- * @author A true hipster
- */
-entity Provincia {
-  codigo String required maxlength(3)
-  nombre String required maxlength(30)
 }
 
 @readOnly
@@ -115,7 +108,7 @@ relationship OneToOne {
   Clasificaciones{divisa(required)} to Divisa 
   Clasificaciones{idioma(required)} to Idioma 
   Clasificaciones{refCliente(required)} to Cliente 
-  Clasificaciones{provinciaDestino(required)} to Provincia 
+  Clasificaciones{provinciaDestino} to Provincia
   ProductoControles{codigoArancelario(required)} to Producto 
   ProductoControles{idControl(required)} to Control 
   Traduccion{idiomaOrigen(required)} to Idioma 
@@ -127,5 +120,3 @@ dto * with mapstruct
 paginate Cliente, Control, Divisa, Idioma, Pais, TipoCliente with pagination
 paginate Clasificaciones, Producto, ProductoControles, Provincia with infinite-scroll
 service * with serviceImpl
-
-
