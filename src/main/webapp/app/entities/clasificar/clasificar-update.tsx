@@ -1,42 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
-import { Button, Row, Col, FormText } from 'reactstrap';
-import { isNumber, Translate, translate, ValidatedField, ValidatedForm } from 'react-jhipster';
+import { Button, Row, Col } from 'reactstrap';
+import { Translate, translate, ValidatedField, ValidatedForm } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
-import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IPais } from 'app/shared/model/pais.model';
 import { getEntities as getPais } from 'app/entities/pais/pais.reducer';
-import { IDivisa } from 'app/shared/model/divisa.model';
 import { getEntities as getDivisas } from 'app/entities/divisa/divisa.reducer';
-import { IIdioma } from 'app/shared/model/idioma.model';
 import { getEntities as getIdiomas } from 'app/entities/idioma/idioma.reducer';
-import { ICliente } from 'app/shared/model/cliente.model';
 import { getEntities as getClientes } from 'app/entities/cliente/cliente.reducer';
-import { IProvincia } from 'app/shared/model/provincia.model';
 import { getEntities as getProvincias } from 'app/entities/provincia/provincia.reducer';
-import { IRemitente } from 'app/shared/model/remitente.model';
-import { getEntities as getRemitentes } from 'app/entities/remitente/remitente.reducer';
-import { IDestinatario } from 'app/shared/model/destinatario.model';
-import { getEntities as getDestinatarios } from 'app/entities/destinatario/destinatario.reducer';
-import { IClasificar } from 'app/shared/model/clasificar.model';
-import { getEntity, updateEntity, createEntity, reset } from './clasificar.reducer';
+import { updateEntity, createEntity, reset } from './clasificar.reducer';
 
 export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => {
   const dispatch = useAppDispatch();
 
-  const [isNew] = useState(!props.match.params || !props.match.params.id);
+  //const [isNew] = useState(!props.match.params || !props.match.params.id);
+  const isNew = true;
 
   const pais = useAppSelector(state => state.pais.entities);
   const divisas = useAppSelector(state => state.divisa.entities);
   const idiomas = useAppSelector(state => state.idioma.entities);
   const clientes = useAppSelector(state => state.cliente.entities);
   const provincias = useAppSelector(state => state.provincia.entities);
-  const remitentes = useAppSelector(state => state.remitente.entities);
-  const destinatarios = useAppSelector(state => state.destinatario.entities);
   const clasificarEntity = useAppSelector(state => state.clasificar.entity);
   const loading = useAppSelector(state => state.clasificar.loading);
   const updating = useAppSelector(state => state.clasificar.updating);
@@ -46,19 +33,20 @@ export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => 
   };
 
   useEffect(() => {
-    if (isNew) {
+    {
+      /*if (isNew) {
       dispatch(reset());
     } else {
       dispatch(getEntity(props.match.params.id));
+    }*/
     }
 
+    dispatch(reset());
     dispatch(getPais({}));
     dispatch(getDivisas({}));
     dispatch(getIdiomas({}));
     dispatch(getClientes({}));
     dispatch(getProvincias({}));
-    dispatch(getRemitentes({}));
-    dispatch(getDestinatarios({}));
   }, []);
 
   useEffect(() => {
@@ -77,8 +65,6 @@ export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => 
       idioma: idiomas.find(it => it.id.toString() === values.idioma.toString()),
       refCliente: clientes.find(it => it.id.toString() === values.refCliente.toString()),
       provinciaDestino: provincias.find(it => it.id.toString() === values.provinciaDestino.toString()),
-      idRemitente: remitentes.find(it => it.id.toString() === values.idRemitente.toString()),
-      idDestinatario: destinatarios.find(it => it.id.toString() === values.idDestinatario.toString()),
     };
 
     if (isNew) {
@@ -99,8 +85,6 @@ export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => 
           idioma: clasificarEntity?.idioma?.id,
           refCliente: clasificarEntity?.refCliente?.id,
           provinciaDestino: clasificarEntity?.provinciaDestino?.id,
-          idRemitente: clasificarEntity?.idRemitente?.id,
-          idDestinatario: clasificarEntity?.idDestinatario?.id,
         };
 
   return (
@@ -129,16 +113,21 @@ export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => 
                 />
               ) : null}
               <ValidatedField
-                label={translate('diccionarioApp.clasificar.descripcion')}
-                id="clasificar-descripcion"
-                name="descripcion"
-                data-cy="descripcion"
-                type="text"
-                validate={{
-                  required: { value: true, message: translate('entity.validation.required') },
-                  maxLength: { value: 250, message: translate('entity.validation.maxlength', { max: 250 }) },
-                }}
-              />
+                id="clasificar-refCliente"
+                name="refCliente"
+                data-cy="refCliente"
+                label={translate('diccionarioApp.clasificar.refCliente')}
+                type="select"
+              >
+                <option value="" key="0" />
+                {clientes
+                  ? clientes.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.id}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
               <ValidatedField
                 label={translate('diccionarioApp.clasificar.cliente')}
                 id="clasificar-cliente"
@@ -146,9 +135,100 @@ export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => 
                 data-cy="cliente"
                 type="text"
                 validate={{
+                  required: { value: true, message: translate('entity.validation.required') },
                   maxLength: { value: 100, message: translate('entity.validation.maxlength', { max: 100 }) },
                 }}
               />
+              <ValidatedField
+                id="clasificar-paisOrigen"
+                name="paisOrigen"
+                data-cy="paisOrigen"
+                label={translate('diccionarioApp.clasificar.paisOrigen')}
+                type="select"
+              >
+                <option value="" key="0" />
+                {pais
+                  ? pais.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.id}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
+              <ValidatedField
+                id="clasificar-paisDestino"
+                name="paisDestino"
+                data-cy="paisDestino"
+                label={translate('diccionarioApp.clasificar.paisDestino')}
+                type="select"
+              >
+                <option value="" key="0" />
+                {pais
+                  ? pais.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.id}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
+              <ValidatedField
+                id="clasificar-idioma"
+                name="idioma"
+                data-cy="idioma"
+                label={translate('diccionarioApp.clasificar.idioma')}
+                type="select"
+              >
+                <option value="" key="0" />
+                {idiomas
+                  ? idiomas.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.id}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
+              <ValidatedField
+                label={translate('diccionarioApp.clasificar.descripcion')}
+                id="clasificar-descripcion"
+                name="descripcion"
+                data-cy="descripcion"
+                type="text"
+                validate={{
+                  maxLength: { value: 150, message: translate('entity.validation.maxlength', { max: 150 }) },
+                }}
+              />
+              <ValidatedField
+                id="clasificar-divisa"
+                name="divisa"
+                data-cy="divisa"
+                label={translate('diccionarioApp.clasificar.divisa')}
+                type="select"
+              >
+                <option value="" key="0" />
+                {divisas
+                  ? divisas.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.id}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
+              <ValidatedField
+                id="clasificar-provinciaDestino"
+                name="provinciaDestino"
+                data-cy="provinciaDestino"
+                label={translate('diccionarioApp.clasificar.provinciaDestino')}
+                type="select"
+              >
+                <option value="" key="0" />
+                {provincias
+                  ? provincias.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.id}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
               <ValidatedField
                 label={translate('diccionarioApp.clasificar.remitente')}
                 id="clasificar-remitente"
@@ -166,7 +246,7 @@ export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => 
                 data-cy="destinatario"
                 type="text"
                 validate={{
-                  maxLength: { value: 200, message: translate('entity.validation.maxlength', { max: 200 }) },
+                  maxLength: { value: 100, message: translate('entity.validation.maxlength', { max: 100 }) },
                 }}
               />
               <ValidatedField
@@ -176,7 +256,27 @@ export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => 
                 data-cy="proveedor"
                 type="text"
                 validate={{
-                  maxLength: { value: 200, message: translate('entity.validation.maxlength', { max: 200 }) },
+                  maxLength: { value: 100, message: translate('entity.validation.maxlength', { max: 100 }) },
+                }}
+              />
+              <ValidatedField
+                label={translate('diccionarioApp.clasificar.refRemitente')}
+                id="clasificar-refRemitente"
+                name="refRemitente"
+                data-cy="refRemitente"
+                type="text"
+                validate={{
+                  maxLength: { value: 20, message: translate('entity.validation.maxlength', { max: 20 }) },
+                }}
+              />
+              <ValidatedField
+                label={translate('diccionarioApp.clasificar.refDestinatario')}
+                id="clasificar-refDestinatario"
+                name="refDestinatario"
+                data-cy="refDestinatario"
+                type="text"
+                validate={{
+                  maxLength: { value: 20, message: translate('entity.validation.maxlength', { max: 20 }) },
                 }}
               />
               <ValidatedField
@@ -204,143 +304,7 @@ export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => 
                 data-cy="peso"
                 type="text"
               />
-              <ValidatedField
-                id="clasificar-paisOrigen"
-                name="paisOrigen"
-                data-cy="paisOrigen"
-                label={translate('diccionarioApp.clasificar.paisOrigen')}
-                type="select"
-                required
-              >
-                <option value="" key="0" />
-                {pais
-                  ? pais.map(otherEntity => (
-                      <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.nombrePais}
-                      </option>
-                    ))
-                  : null}
-              </ValidatedField>
-              <FormText>
-                <Translate contentKey="entity.validation.required">This field is required.</Translate>
-              </FormText>
-              <ValidatedField
-                id="clasificar-paisDestino"
-                name="paisDestino"
-                data-cy="paisDestino"
-                label={translate('diccionarioApp.clasificar.paisDestino')}
-                type="select"
-                required
-              >
-                <option value="" key="0" />
-                {pais
-                  ? pais.map(otherEntity => (
-                      <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.nombrePais}
-                      </option>
-                    ))
-                  : null}
-              </ValidatedField>
-              <FormText>
-                <Translate contentKey="entity.validation.required">This field is required.</Translate>
-              </FormText>
-              <ValidatedField
-                id="clasificar-divisa"
-                name="divisa"
-                data-cy="divisa"
-                label={translate('diccionarioApp.clasificar.divisa')}
-                type="select"
-              >
-                <option value="" key="0" />
-                {divisas
-                  ? divisas.map(otherEntity => (
-                      <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.nombreDivisa}
-                      </option>
-                    ))
-                  : null}
-              </ValidatedField>
-              <ValidatedField
-                id="clasificar-idioma"
-                name="idioma"
-                data-cy="idioma"
-                label={translate('diccionarioApp.clasificar.idioma')}
-                type="select"
-              >
-                <option value="" key="0" />
-                {idiomas
-                  ? idiomas.map(otherEntity => (
-                      <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.nombre}
-                      </option>
-                    ))
-                  : null}
-              </ValidatedField>
-              <ValidatedField
-                id="clasificar-refCliente"
-                name="refCliente"
-                data-cy="refCliente"
-                label={translate('diccionarioApp.clasificar.refCliente')}
-                type="select"
-              >
-                <option value="" key="0" />
-                {clientes
-                  ? clientes.map(otherEntity => (
-                      <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.nombre}
-                      </option>
-                    ))
-                  : null}
-              </ValidatedField>
-              <ValidatedField
-                id="clasificar-provinciaDestino"
-                name="provinciaDestino"
-                data-cy="provinciaDestino"
-                label={translate('diccionarioApp.clasificar.provinciaDestino')}
-                type="select"
-              >
-                <option value="" key="0" />
-                {provincias
-                  ? provincias.map(otherEntity => (
-                      <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.nombreProvincia}
-                      </option>
-                    ))
-                  : null}
-              </ValidatedField>
-              <ValidatedField
-                id="clasificar-idRemitente"
-                name="idRemitente"
-                data-cy="idRemitente"
-                label={translate('diccionarioApp.clasificar.idRemitente')}
-                type="select"
-              >
-                <option value="" key="0" />
-                {remitentes
-                  ? remitentes.map(otherEntity => (
-                      <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.nombre}
-                      </option>
-                    ))
-                  : null}
-              </ValidatedField>
-              <ValidatedField
-                id="clasificar-idDestinatario"
-                name="idDestinatario"
-                data-cy="idDestinatario"
-                label={translate('diccionarioApp.clasificar.idDestinatario')}
-                type="select"
-              >
-                <option value="" key="0" />
-                {destinatarios
-                  ? destinatarios.map(otherEntity => (
-                      <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.nombre}
-                      </option>
-                    ))
-                  : null}
-              </ValidatedField>
-              <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/clasificar" replace color="info">
+              <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">

@@ -32,6 +32,18 @@ export const getEntity = createAsyncThunk(
   { serializeError: serializeAxiosError }
 );
 
+{
+  /*export const createEntity = createAsyncThunk(
+  'clasificar/create_entity',
+  async (entity: IClasificar, thunkAPI) => {
+    const result = await axios.post<IClasificar>(apiUrl, cleanEntity(entity));
+    thunkAPI.dispatch(getEntities({}));
+    return result;
+  },
+  { serializeError: serializeAxiosError }
+);*/
+}
+
 export const createEntity = createAsyncThunk(
   'clasificar/create_entity',
   async (entity: IClasificar, thunkAPI) => {

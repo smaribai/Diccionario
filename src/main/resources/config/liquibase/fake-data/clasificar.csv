@@ -1,11 +1,1 @@
-id;descripcion;cliente;remitente;destinatario;proveedor;codigo_arancelario_origen;importe;uds;peso;pais_origen_id;pais_destino_id
-1;Mali Loan;Genérico Fácil;sticky Burkina Algodón;invoice Mascotas feed;tolerante Mascotas optical;Baleares circuit Mod;68525;29465;83427;1;1
-2;Rial;bluetooth AGP Inteligente;Pantalones logística;Guantes Berkshire Cambridgeshire;Quinta Granito Distrito;Metal Música bluetoo;84506;4001;65176;2;2
-3;auxiliary SDD Datos;bypass;productize payment Muelle;interactive Contabilidad;invoice strategic;Marca Intranet;14293;10270;79097;3;3
-4;parse Loan deliver;Cantabria;Operaciones Madera connecting;calculating;Lituania Vatu e-commerce;Rústico Muelle;87828;66396;72369;4;4
-5;synergize;generating Zapatos;Cuesta Increible;Regional Pollo COM;Salvador bypassing;Asociado Ladrillo At;29076;6007;53252;5;5
-6;CSS incremental Configurable;Plástico Regional Oficial;rich integrate Digitalizado;Futuro Glorieta Gris;solutions Madera;wireless;51159;13106;21521;6;6
-7;Finlandia bandwidth;Holanda;input relationships platforms;mano Mascotas;withdrawal Moda;Venezuela invoice;16952;7124;43671;7;7
-8;Fantástico deposit;primary Funcionalidad Director;e-tailers Panamá;hack;Ladrillo;Verde primary;90263;16568;27653;8;8
-9;Bermuda;program;Configuración Cedi;Opcional Cambridgeshire Buckinghamshire;Funcionalidad;Fantástico CSS payme;30259;12018;57601;9;9
-10;port;bluetooth;strategic migración;Programa Infraestructura;Castilla-La;parse Interno Analis;60608;12910;23327;10;10
+"id";"descripcion";"cliente";"remitente";"destinatario";"proveedor";"codigo_arancelario_origen";"importe";"uds";"peso";"pais_origen_id";"pais_destino_id";"divisa_id";"idioma_id";"ref_cliente_id";"provincia_destino_id";"id_remitente_id";"id_destinatario_id"

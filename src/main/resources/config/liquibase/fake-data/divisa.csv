@@ -1,11 +1,160 @@
-id;codigo_divisa;nombre_divisa
-1;Pes;feed Metal compuesto
-2;pay;Dinar Orígenes
-3;Ger;Rojo
-4;cal;Verde Técnico
-5;Pou;Director hacking
-6;Gru;Extrarradio
-7;Exc;markets Moda Heredado
-8;en ;Ergonómico synthesizing Plástico
-9;upX;XML
-10;Pla;Creativo scale generate
+"id";"codigo_divisa";"nombre_divisa"
+1;AED;Dirham de los Emiratos Árabes Unidos
+2;AFN;Afgani afgano
+3;ALL;Lek albanés
+4;AMD;Dram armenio
+5;ANG;Florín antillano neerlandés
+6;AOA;Kwanza angoleño
+7;ARS;Peso argentino
+8;AUD;Dólar australiano
+9;AWG;Florín arubeño
+10;AZN;Manat azerbaiyano
+11;BAM;Marco convertible de Bosnia y Herzegovina
+12;BBD;Dólar barbadense
+13;BDT;Taka bangladesí
+14;BGN;Lev búlgaro
+15;BHD;Dinar bahreiní
+16;BIF;Franco burundiano
+17;BMD;Dólar bermudeño
+18;BND;Dólar bruneano
+19;BOB;Boliviano
+20;BRL;Real brasileño
+21;BSD;Dólar bahameño
+22;BTN;Ngultrum butanés
+23;BWP;Pula botsuano
+24;BYN;Rublo bielorruso
+25;BZD;Dólar beliceño
+26;CAD;Dólar canadiense
+27;CDF;Franco congoleño
+28;CHF;Franco suizo
+29;CLP;Peso chileno
+30;CNY;Yuan chino
+31;COP;Peso colombiano
+32;CRC;Colón costarricense
+33;CUC;Peso cubano convertible
+34;CUP;Peso cubano
+35;CVE;Escudo caboverdiano
+36;CZK;Corona checa
+37;DJF;Franco yibutiano
+38;DKK;Corona danesa
+39;DOP;Peso dominicano
+40;DZD;Dinar argelino
+41;EGP;Libra egipcia
+42;ERN;Nakfa eritreo
+43;ETB;Birr etíope
+44;EUR;Euro
+45;FJD;Dólar fiyiano
+46;FKP;Libra malvinense
+47;GBP;Libra esterlina
+48;GEL;Lari georgiano
+49;GGP;Libra de Guernsey
+50;GHS;Cedi ghanés
+51;GIP;Libra de Gibraltar
+52;GMD;Dalasi gambiano
+53;GNF;Franco guineano
+54;GTQ;Quetzal guatemalteco
+55;GYD;Dólar guyanés
+56;HKD;Dólar de Hong Kong
+57;HNL;Lempira hondureño
+58;HRK;Kuna croata
+59;HTG;Gourde haitiano
+60;HUF;Forinto húngaro
+61;IDR;Rupia indonesia
+62;ILS;Nuevo shekel israelí
+63;IMP;Libra de la Isla de Man
+64;INR;Rupia india
+65;IQD;Dinar iraquí
+66;IRR;Rial iraní
+67;ISK;Corona islandesa
+68;JEP;Libra de Jersey
+69;JMD;Dólar jamaicano
+70;JOD;Dinar jordano
+71;JPY;Yen japonés
+72;KES;Chelín keniata
+73;KGS;Som kirguís
+74;KHR;Riel camboyano
+75;KMF;Franco comorense
+76;KPW;Won norcoreano
+77;KRW;Won surcoreano
+78;KWD;Dinar kuwaití
+79;KYD;Dólar caimán
+80;KZT;Tenge kazajo
+81;LAK;Kip laosiano
+82;LBP;Libra libanesa
+83;LKR;Rupia de Sri Lanka
+84;LRD;Dólar liberiano
+85;LSL;Loti lesothense
+86;LYD;Dinar libio
+87;MAD;Dirham marroquí
+88;MDL;Leu moldavo
+89;MGA;Ariary malgache
+90;MKD;Denar macedonio
+91;MMK;Kyat birmano
+92;MNT;Tugrik mongol
+93;MOP;Pataca macaense
+94;MRU;Uquiya mauritana
+95;MUR;Rupia mauriciana
+96;MVR;Rufiyaa maldiva
+97;MWK;Kwacha malauí
+98;MXN;Peso mexicano
+99;MYR;Ringgit malayo
+100;MZN;Metical mozambiqueño
+101;NAD;Dólar namibio
+102;NGN;Naira nigeriana
+103;NIO;Córdoba nicaragüense
+104;NOK;Corona noruega
+105;NPR;Rupia nepalí
+106;NZD;Dólar neozelandés
+107;OMR;Rial omaní
+108;PAB;Balboa panameño
+109;PEN;Sol peruano
+110;PGK;Kina papú
+111;PHP;Peso filipino
+112;PKR;Rupia pakistaní
+113;PLN;Zloty polaco
+114;PYG;Guaraní paraguayo
+115;QAR;Rial qatarí
+116;RON;Leu rumano
+117;RSD;Dinar serbio
+118;RUB;Rublo ruso
+119;RWF;Franco ruandés
+120;SAR;Riyal saudí
+121;SBD;Dólar de las Islas Salomón
+122;SCR;Rupia seychelense
+123;SDG;Libra sudanesa
+124;SEK;Corona sueca
+125;SGD;Dólar de Singapur
+126;SHP;Libra de Santa Elena
+127;SLL;Leone de Sierra Leona
+128;SOS;Chelín somalí
+129;SRD;Dólar surinamés
+130;SSP;Libra sursudanesa
+131;STN;Dobra de Santo Tomé y Príncipe
+132;SVC;Colón salvadoreño
+133;SYP;Libra siria
+134;SZL;Lilangeni suazi
+135;THB;Baht tailandés
+136;TJS;Somoni tayiko
+137;TMT;Manat turcomano
+138;TND;Dinar tunecino
+139;TOP;Paanga tongano
+140;TRY;Lira turca
+141;TTD;Dólar trinitense
+142;TWD;Nuevo dólar taiwanés
+143;TZS;Chelín tanzano
+144;UAH;Grivna ucraniana
+145;UGX;Chelín ugandés
+146;USD;Dólar estadounidense
+147;UYU;Peso uruguayo
+148;UZS;Som uzbeko
+149;VES;Bolívar venezolano
+150;VND;Dong vietnamita
+151;VUV;Vatu vanuatuense
+152;WST;Tala samoana
+153;XAF;Franco CFA de África Central
+154;XCD;Dólar del Caribe Oriental
+155;XOF;Franco CFA de África Occidental
+156;XPF;Franco CFP
+157;YER;Rial yemení
+158;ZAR;Rand sudafricano
+159;ZMW;Kwacha zambiano

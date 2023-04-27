@@ -1,11 +1,21 @@
-id;texto_origen;texto_destino;idioma_origen_id;idioma_destino_id
-1;Configurable Berkshire;Negro Producto;1;1
-2;Asistente SMTP Integración;Optimizado Administrador;2;2
-3;Rufiyaa payment;Acero Pescado;3;3
-4;Gris Pescado;COM connecting;4;4
-5;Investigación Usabilidad;enterprise;5;5
-6;back-end;Deportes Bacon;6;6
-7;quantifying;brand Interno Ladrillo;7;7
-8;Bicicleta Informática Buckinghamshire;Savings;8;8
-9;Representante;benchmark;9;9
-10;extensible monetize wireless;Dollar;10;10
+"id";"texto_origen";"texto_destino";"idioma_origen_id";"idioma_destino_id"
+1;Portable Bluetooth Speaker;Altavoz Bluetooth portátil;38;40
+2;Wireless Charging Pad;Almohadilla de carga inalámbrica;38;40
+3;High Definition Smart TV;Televisor inteligente de alta definición;38;40
+4;Digital SLR Camera;Cámara réflex digital;38;40
+5;Professional Hair Dryer;Secador de pelo profesional;38;40
+6;Electric Toothbrush;Cepillo de dientes eléctrico;38;40
+7;Fitness Tracker Watch;Reloj de seguimiento de fitness;38;40
+8;Gaming Laptop;Portátil para juegos;38;40
+9;Smartphone with Dual SIM;Teléfono inteligente con doble SIM;38;40
+10;Portable Power Bank;Banco de energía portátil;38;40
+11;Ordenador portátil de última generación;Latest generation laptop computer;40;38
+12;Tablet de alta gama;High-end tablet;40;38
+13;Cámara de vigilancia inalámbrica;Wireless surveillance camera;40;38
+14;Afeitadora eléctrica recargable;Rechargeable electric shaver;40;38
+15;Sistema de altavoces para cine en casa;Home theater speaker system;40;38
+16;Pulsera de actividad inteligente;Smart activity tracker wristband;40;38
+17;Impresora multifunción láser;Multifunction laser printer;40;38
+18;Cargador de coche para teléfono móvil;Car charger for mobile phone;40;38
+19;Monitor de ritmo cardíaco;Heart rate monitor;40;38
+20;Aspiradora robot con tecnología de mapeo;Robot vacuum cleaner with mapping technology;40;38

@@ -1,11 +1,53 @@
-id;codigo_provincia;nombre_provincia
-1;e-e;Sabroso back-end
-2;Asi;calculating evolve emulación
-3;Grá;Ejecutivo interface
-4;Can;protocol Aragón el
-5;int;Algodón Cliente alarm
-6;Ext;bandwidth
-7;hor;iterate
-8;ove;ROI
-9;Res;Account Artesanal
-10;RAM;concepto Madera
+"id";"codigo_provincia";"nombre_provincia"
+1;ALA;Álava
+2;ALB;Albacete
+3;ALC;Alicante
+4;ALM;Almería
+5;AST;Asturias
+6;AVI;Ávila
+7;BAD;Badajoz
+8;BAR;Barcelona
+9;BUR;Burgos
+10;CAC;Cáceres
+11;CAD;Cádiz
+12;CAN;Cantabria
+13;CAS;Castellón
+14;CEU;Ceuta
+15;CIR;Ciudad Real
+16;COR;Córdoba
+17;CUU;Cuenca
+18;GER;Gerona
+19;GRA;Granada
+20;GUA;Guadalajara
+21;GUI;Guipúzcoa
+22;HUE;Huelva
+23;HUS;Huesca
+24;BAL;Islas Baleares
+25;JAE;Jaén
+26;LCO;La Coruña
+27;LRI;La Rioja
+28;LPA;Las Palmas
+29;LEO;León
+30;LER;Lérida
+31;LUG;Lugo
+32;MAD;Madrid
+33;MAL;Málaga
+34;MEL;Melilla
+35;MUR;Murcia
+36;NAV;Navarra
+37;ORE;Orense
+38;PAL;Palencia
+39;PON;Pontevedra
+40;SAL;Salamanca
+41;SCT;Santa Cruz de Tenerife
+42;SEG;Segovia
+43;SEV;Sevilla
+44;SOR;Soria
+45;TAR;Tarragona
+46;TER;Teruel
+47;TOL;Toledo
+48;VAL;Valencia
+49;VLL;Valladolid
+50;VIZ;Vizcaya
+51;ZAM;Zamora
+52;ZAR;Zaragoza

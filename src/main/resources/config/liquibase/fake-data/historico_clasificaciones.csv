@@ -1,11 +1,1 @@
-id;descripcion;cliente;remitente;destinatario;proveedor;codigo_arancelario_origen;importe;uds;peso;codigo_arancelario_obtenido;pais_origen_id;pais_destino_id
-1;B2C Lev Multi;1080p Belize;Calidad Intranet generate;ubiquitous;Checking ubiquitous;evolve;26950;12676;96199;Camboya;1;1
-2;Práctico;Cara invoice;compress Masía;Avon;Pelota Multi;Configuración infrae;47409;3535;60041;incentivize;2;2
-3;Metal Acero Home;matrix;wireless synthesizing;out-of-the-box;indexing Barbados;Normas demanda;52175;57284;383;Guinea Planificador;3;3
-4;defectos relationships program;hack backing;invoice Dinánmico;transmit;Contabilidad;aprovechar;80460;21203;66544;Rústico evolve;4;4
-5;override Guapa;Pantalones Violeta;Lats;generate;overriding hacking asimétrica;Agente Etiopía;71755;72190;99698;transmitting;5;5
-6;Jefe interfaces Cuentas;vortals Mesa Facilitador;Morado de relationships;generate Inversor;Camiseta Navarra;tiempo;76816;42206;69497;Buckinghamshire Crea;6;6
-7;Lari bidireccional Gabón;Valenciana;exploit Metal redundant;País;Dinar withdrawal;SQL;81009;89366;82022;Música Cliente;7;7
-8;invoice Hormigon Seychelles;Algodón;Avon Plástico;Joyería open-source;Cantabria driver;partnerships envisio;97885;55891;21682;Card Ergonómico Extr;8;8
-9;Berkshire;Papelería Kazajistan Plástico;División;Mascotas heurística móbil;hacking;transmitting Electró;7964;15253;46688;bypassing;9;9
-10;Pescado;Jefe Fantástico multiestado;compressing;Central Directo 3rd;Rojo Prolongación;transition;62869;38137;73746;Baleares Auto;10;10
+"id";"descripcion";"cliente";"remitente";"destinatario";"proveedor";"codigo_arancelario_origen";"importe";"uds";"peso";"codigo_arancelario_obtenido";"pais_origen_id";"pais_destino_id";"divisa_id";"idioma_id";"ref_cliente_id";"provincia_destino_id";"id_remitente_id";"id_destinatario_id"

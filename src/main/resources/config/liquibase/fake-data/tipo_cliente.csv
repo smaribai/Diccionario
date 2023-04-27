@@ -1,11 +1,14 @@
-id;codigo;nombre
-1;Silla;connect
-2;Camis;Joyería
-3;SMTP ;Operaciones
-4;Tecla;Camiseta Lari Rojo
-5;Incre;Terrenos
-6;Consu;Raton
-7;out-o;Cataluña Eslovaquia
-8;medic;tangible Digitalizado
-9;a;mobile
-10;seaml;Cambridgeshire connect
+"id";"codigo";"nombre"
+1;P01;Particular
+2;E01;Empresa pequeña
+3;E02;Empresa mediana
+4;E03;Empresa grande
+5;G01;Gobierno
+6;I01;Institución
+7;O01;ONG
+8;S01;Servicios
+9;T01;Tienda en línea
+10;IM01;Importador
+11;EX01;Exportador
+12;TRA01;Agente de transporte
+13;ADU01;Agente aduanero

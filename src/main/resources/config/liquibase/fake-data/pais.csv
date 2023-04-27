@@ -1,11 +1,200 @@
-id;codigo_pais;nombre_pais
-1;Bu;En algoritmo
-2;sy;asimétrica Ramal
-3;Ba;Silla Bedfordshire
-4;di;Parafarmacia Cambridgeshire 1080p
-5;ca;Ergonómico
-6;Av;Deportes Arroyo
-7;As;back-end RSS Futuro
-8;Qu;Account
-9;Ac;Distrito
-10;Or;Bolivar
+"id";"codigo_pais";"nombre_pais"
+1;AD;Andorra
+2;AE;Emiratos Árabes Unidos
+3;AF;Afganistán
+4;AG;Antigua y Barbuda
+5;AI;Anguila
+6;AL;Albania
+7;AM;Armenia
+8;AN;Antillas Neerlandesas
+9;AO;Angola
+10;AQ;Antártida
+11;AR;Argentina
+12;AS;Samoa Americana
+13;AT;Austria
+14;AU;Australia
+15;AW;Aruba
+16;AX;Islas Åland
+17;AZ;Azerbaiyán
+18;BA;Bosnia y Herzegovina
+19;BB;Barbados
+20;BD;Bangladesh
+21;BE;Bélgica
+22;BF;Burkina Faso
+23;BG;Bulgaria
+24;BH;Bahréin
+25;BI;Burundi
+26;BJ;Benín
+27;BL;San Bartolomé
+28;BM;Bermudas
+29;BN;Brunéi
+30;BO;Bolivia
+31;BQ;Caribe neerlandés
+32;BR;Brasil
+33;BS;Bahamas
+34;BT;Bután
+35;BV;Isla Bouvet
+36;BW;Botsuana
+37;BY;Bielorrusia
+38;BZ;Belice
+39;CA;Canadá
+40;CC;Islas Cocos
+41;CD;República Democrática del Congo
+42;CF;República Centroafricana
+43;CG;Congo
+44;CH;Suiza
+45;CI;Costa de Marfil
+46;CK;Islas Cook
+47;CL;Chile
+48;CM;Camerún
+49;CN;China
+50;CO;Colombia
+51;CR;Costa Rica
+52;CU;Cuba
+53;CV;Cabo Verde
+54;CW;Curazao
+55;CX;Isla de Navidad
+56;CY;Chipre
+57;CZ;Chequia
+58;DE;Alemania
+59;DJ;Yibuti
+60;DK;Dinamarca
+61;DM;Dominica
+62;DO;República Dominicana
+63;DZ;Argelia
+64;EC;Ecuador
+65;EE;Estonia
+66;EG;Egipto
+67;EH;Sáhara Occidental
+68;ER;Eritrea
+69;ES;España
+70;ET;Etiopía
+71;FI;Finlandia
+72;FJ;Fiyi
+73;FK;Islas Malvinas
+74;FM;Micronesia
+75;FO;Islas Feroe
+76;FR;Francia
+77;GA;Gabón
+78;GB;Reino Unido
+79;GD;Granada
+80;GE;Georgia
+81;GF;Guayana Francesa
+82;GG;Guernsey
+83;GH;Ghana
+84;GI;Gibraltar
+85;GL;Groenlandia
+86;GM;Gambia
+87;GN;Guinea
+88;GP;Guadalupe
+89;GQ;Guinea Ecuatorial
+90;GR;Grecia
+91;GS;Islas Georgias del Sur y Sandwich del Sur
+92;GT;Guatemala
+93;GU;Guam
+94;GW;Guinea-Bissau
+95;GY;Guyana
+96;HK;Hong Kong
+97;HM;Islas Heard y McDonald
+98;HN;Honduras
+99;HR;Croacia
+100;HT;Haití
+101;HU;Hungría
+102;ID;Indonesia
+103;IE;Irlanda
+104;IL;Israel
+105;IM;Isla de Man
+106;IN;India
+107;IO;Territorio Británico del Océano Índico
+108;IQ;Irak
+109;IR;Irán
+110;IS;Islandia
+111;IT;Italia
+112;JE;Jersey
+113;JM;Jamaica
+114;JO;Jordania
+115;JP;Japón
+116;KE;Kenia
+117;KG;Kirguistán
+118;KH;Camboya
+119;KI;Kiribati
+120;KM;Comoras
+121;KN;San Cristóbal y Nieves
+122;KP;Corea del Norte
+123;KR;Corea del Sur
+124;KW;Kuwait
+125;KY;Islas Caimán
+126;KZ;Kazajistán
+127;LA;Laos
+128;LB;Líbano
+129;LC;Santa Lucía
+130;LI;Liechtenstein
+131;LK;Sri Lanka
+132;LR;Liberia
+133;LS;Lesoto
+134;LT;Lituania
+135;LU;Luxemburgo
+136;LV;Letonia
+137;LY;Libia
+138;MA;Marruecos
+139;MC;Mónaco
+140;MD;Moldavia
+141;ME;Montenegro
+142;MF;San Martín
+143;MG;Madagascar
+144;MH;Islas Marshall
+145;MK;Macedonia del Norte
+146;ML;Mali
+147;MM;Myanmar
+148;MN;Mongolia
+149;MO;Macao
+150;MP;Islas Marianas del Norte
+151;MQ;Martinica
+152;MR;Mauritania
+153;MS;Montserrat
+154;MT;Malta
+155;MU;Mauricio
+156;MV;Maldivas
+157;MW;Malaui
+158;MX;México
+159;MY;Malasia
+160;MZ;Mozambique
+161;NA;Namibia
+162;NC;Nueva Caledonia
+163;NE;Níger
+164;NF;Isla Norfolk
+165;NG;Nigeria
+166;NI;Nicaragua
+167;NL;Países Bajos
+168;NO;Noruega
+169;NP;Nepal
+170;NR;Nauru
+171;NU;Niue
+172;NZ;Nueva Zelanda
+173;OM;Omán
+174;PA;Panamá
+175;PE;Perú
+176;PF;Polinesia Francesa
+177;PG;Papúa Nueva Guinea
+178;PH;Filipinas
+179;PK;Pakistán
+180;PL;Polonia
+181;PM;San Pedro y Miquelón
+182;PN;Islas Pitcairn
+183;PR;Puerto Rico
+184;PS;Palestina
+185;PT;Portugal
+186;PW;Palaos
+187;PY;Paraguay
+188;QA;Catar
+189;RE;Reunión
+190;RO;Rumania
+191;RS;Serbia
+192;RU;Rusia
+193;RW;Ruanda
+194;SA;Arabia Saudita
+195;SB;Islas Salomón
+196;SC;Seychelles
+197;SD;Sudán
+198;SE;Suecia
+199;SG;Singapur

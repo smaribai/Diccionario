@@ -1,0 +1,8 @@
+"id";"nombre";"descripcion"
+1;Control de calidad de alimentos;Este control se aplica a los envíos que contengan alimentos perecederos.
+2;Control de calidad de medicamentos;Este control se aplica a los envíos que contengan medicamentos o productos farmacéuticos.
+3;Control de calidad de productos electrónicos;Este control se aplica a los envíos que contengan productos electrónicos o dispositivos móviles.
+4;Control de calidad de productos textiles;Este control se aplica a los envíos que contengan productos textiles o prendas de vestir.
+5;Control fitosanitario;Este control se aplica a los envíos que contengan plantas o productos agrícolas.
+6;Control de la Agencia Tributaria;Este control se realiza para verificar el cumplimiento de las normativas tributarias.
+7;Control de la Guardia Civil;Este control se realiza para verificar el cumplimiento de las normativas de seguridad y de protección de la propiedad intelectual.
