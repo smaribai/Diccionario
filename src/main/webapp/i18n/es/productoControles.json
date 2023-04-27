@@ -1,0 +1,26 @@
+{
+  "diccionarioApp": {
+    "productoControles": {
+      "home": {
+        "title": "Producto Controles",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Producto Controles",
+        "createOrEditLabel": "Crear o editar Producto Controles",
+        "notFound": "Ningún Producto Controles encontrado"
+      },
+      "created": "Un nuevo Producto Controles ha sido creado con el identificador {{ param }}",
+      "updated": "Un Producto Controles ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Producto Controles ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Producto Controles {{ id }}?"
+      },
+      "detail": {
+        "title": "Producto Controles"
+      },
+      "id": "ID",
+      "descripcion": "Descripcion",
+      "codigoArancelario": "Codigo Arancelario",
+      "idControl": "Id Control"
+    }
+  }
+}

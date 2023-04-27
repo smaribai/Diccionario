@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Traduccion.
+    -->
+    <changeSet id="20230419070543-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="idioma_origen_id"
+                                 baseTableName="traduccion"
+                                 constraintName="fk_traduccion__idioma_origen_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="idioma"/>
+
+        <addForeignKeyConstraint baseColumnNames="idioma_destino_id"
+                                 baseTableName="traduccion"
+                                 constraintName="fk_traduccion__idioma_destino_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="idioma"/>
+    </changeSet>
+</databaseChangeLog>

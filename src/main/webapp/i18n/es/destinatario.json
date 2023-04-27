@@ -1,0 +1,27 @@
+{
+  "diccionarioApp": {
+    "destinatario": {
+      "home": {
+        "title": "Destinatarios",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Destinatario",
+        "createOrEditLabel": "Crear o editar Destinatario",
+        "notFound": "Ningún Destinatarios encontrado"
+      },
+      "created": "Un nuevo Destinatario ha sido creado con el identificador {{ param }}",
+      "updated": "Un Destinatario ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Destinatario ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Destinatario {{ id }}?"
+      },
+      "detail": {
+        "title": "Destinatario"
+      },
+      "id": "ID",
+      "idDestinatario": "Id Destinatario",
+      "nombre": "Nombre",
+      "descripcion": "Descripcion",
+      "direccion": "Direccion"
+    }
+  }
+}

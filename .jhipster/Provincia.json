@@ -1,0 +1,29 @@
+{
+  "applications": ["Diccionario"],
+  "changelogDate": "20230419071043",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "provincia",
+  "fields": [
+    {
+      "fieldName": "codigoProvincia",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "3",
+      "fieldValidateRulesMinlength": "3"
+    },
+    {
+      "fieldName": "nombreProvincia",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "30"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Provincia",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

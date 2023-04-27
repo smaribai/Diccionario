@@ -1,0 +1,27 @@
+{
+  "diccionarioApp": {
+    "traduccion": {
+      "home": {
+        "title": "Traduccions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Traduccion",
+        "createOrEditLabel": "Create or edit a Traduccion",
+        "notFound": "No Traduccions found"
+      },
+      "created": "A new Traduccion is created with identifier {{ param }}",
+      "updated": "A Traduccion is updated with identifier {{ param }}",
+      "deleted": "A Traduccion is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Traduccion {{ id }}?"
+      },
+      "detail": {
+        "title": "Traduccion"
+      },
+      "id": "ID",
+      "textoOrigen": "Texto Origen",
+      "textoDestino": "Texto Destino",
+      "idiomaOrigen": "Idioma Origen",
+      "idiomaDestino": "Idioma Destino"
+    }
+  }
+}

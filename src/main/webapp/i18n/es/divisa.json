@@ -1,0 +1,25 @@
+{
+  "diccionarioApp": {
+    "divisa": {
+      "home": {
+        "title": "Divisas",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Divisa",
+        "createOrEditLabel": "Crear o editar Divisa",
+        "notFound": "Ningún Divisas encontrado"
+      },
+      "created": "Un nuevo Divisa ha sido creado con el identificador {{ param }}",
+      "updated": "Un Divisa ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Divisa ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Divisa {{ id }}?"
+      },
+      "detail": {
+        "title": "Divisa"
+      },
+      "id": "ID",
+      "codigoDivisa": "Codigo Divisa",
+      "nombreDivisa": "Nombre Divisa"
+    }
+  }
+}

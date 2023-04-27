@@ -1,0 +1,45 @@
+{
+  "applications": ["Diccionario"],
+  "changelogDate": "20230419070543",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "traduccion",
+  "fields": [
+    {
+      "fieldName": "textoOrigen",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "150"
+    },
+    {
+      "fieldName": "textoDestino",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "150"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Traduccion",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "nombre",
+      "otherEntityName": "idioma",
+      "otherEntityRelationshipName": "traduccion",
+      "relationshipName": "idiomaOrigen",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "nombre",
+      "otherEntityName": "idioma",
+      "otherEntityRelationshipName": "traduccion",
+      "relationshipName": "idiomaDestino",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceImpl"
+}

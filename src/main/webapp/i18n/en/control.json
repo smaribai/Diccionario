@@ -1,0 +1,25 @@
+{
+  "diccionarioApp": {
+    "control": {
+      "home": {
+        "title": "Controls",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Control",
+        "createOrEditLabel": "Create or edit a Control",
+        "notFound": "No Controls found"
+      },
+      "created": "A new Control is created with identifier {{ param }}",
+      "updated": "A Control is updated with identifier {{ param }}",
+      "deleted": "A Control is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Control {{ id }}?"
+      },
+      "detail": {
+        "title": "Control"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "descripcion": "Descripcion"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "diccionarioApp": {
+    "traduccion": {
+      "home": {
+        "title": "Traduccions",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Traduccion",
+        "createOrEditLabel": "Crear o editar Traduccion",
+        "notFound": "Ningún Traduccions encontrado"
+      },
+      "created": "Un nuevo Traduccion ha sido creado con el identificador {{ param }}",
+      "updated": "Un Traduccion ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Traduccion ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Traduccion {{ id }}?"
+      },
+      "detail": {
+        "title": "Traduccion"
+      },
+      "id": "ID",
+      "textoOrigen": "Texto Origen",
+      "textoDestino": "Texto Destino",
+      "idiomaOrigen": "Idioma Origen",
+      "idiomaDestino": "Idioma Destino"
+    }
+  }
+}

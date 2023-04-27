@@ -1,0 +1,29 @@
+{
+  "applications": ["Diccionario"],
+  "changelogDate": "20230419071143",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "divisa",
+  "fields": [
+    {
+      "fieldName": "codigoDivisa",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "3",
+      "fieldValidateRulesMinlength": "3"
+    },
+    {
+      "fieldName": "nombreDivisa",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "100"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Divisa",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

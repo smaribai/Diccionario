@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Clasificaciones.
+    -->
+    <changeSet id="20230419071243-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="pais_origen_id"
+                                 baseTableName="historico_clasificaciones"
+                                 constraintName="fk_historico_clasificaciones__pais_origen_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pais"/>
+
+        <addForeignKeyConstraint baseColumnNames="pais_destino_id"
+                                 baseTableName="historico_clasificaciones"
+                                 constraintName="fk_historico_clasificaciones__pais_destino_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pais"/>
+
+        <addForeignKeyConstraint baseColumnNames="divisa_id"
+                                 baseTableName="historico_clasificaciones"
+                                 constraintName="fk_historico_clasificaciones__divisa_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="divisa"/>
+
+        <addForeignKeyConstraint baseColumnNames="idioma_id"
+                                 baseTableName="historico_clasificaciones"
+                                 constraintName="fk_historico_clasificaciones__idioma_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="idioma"/>
+
+        <addForeignKeyConstraint baseColumnNames="ref_cliente_id"
+                                 baseTableName="historico_clasificaciones"
+                                 constraintName="fk_historico_clasificaciones__ref_cliente_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cliente"/>
+
+        <addForeignKeyConstraint baseColumnNames="provincia_destino_id"
+                                 baseTableName="historico_clasificaciones"
+                                 constraintName="fk_historico_clasificaciones__provincia_destino_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="provincia"/>
+
+        <addForeignKeyConstraint baseColumnNames="id_remitente_id"
+                                 baseTableName="historico_clasificaciones"
+                                 constraintName="fk_historico_clasificaciones__id_remitente_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="remitente"/>
+
+        <addForeignKeyConstraint baseColumnNames="id_destinatario_id"
+                                 baseTableName="historico_clasificaciones"
+                                 constraintName="fk_historico_clasificaciones__id_destinatario_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="destinatario"/>
+    </changeSet>
+</databaseChangeLog>

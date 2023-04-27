@@ -1,0 +1,27 @@
+{
+  "diccionarioApp": {
+    "remitente": {
+      "home": {
+        "title": "Remitentes",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Remitente",
+        "createOrEditLabel": "Crear o editar Remitente",
+        "notFound": "Ningún Remitentes encontrado"
+      },
+      "created": "Un nuevo Remitente ha sido creado con el identificador {{ param }}",
+      "updated": "Un Remitente ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Remitente ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Remitente {{ id }}?"
+      },
+      "detail": {
+        "title": "Remitente"
+      },
+      "id": "ID",
+      "idRemitente": "Id Remitente",
+      "nombre": "Nombre",
+      "descripcion": "Descripcion",
+      "direccion": "Direccion"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "applications": ["Diccionario"],
+  "changelogDate": "20230419070943",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "control",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Control",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

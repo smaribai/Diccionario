@@ -1,0 +1,129 @@
+{
+  "applications": ["Diccionario"],
+  "changelogDate": "20230419071243",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "historico_clasificaciones",
+  "fields": [
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "250"
+    },
+    {
+      "fieldName": "cliente",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "remitente",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "destinatario",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "proveedor",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "codigoArancelarioOrigen",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "fieldName": "importe",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "uds",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "peso",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "codigoArancelarioObtenido",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Clasificaciones",
+  "pagination": "infinite-scroll",
+  "readOnly": true,
+  "relationships": [
+    {
+      "otherEntityField": "nombrePais",
+      "otherEntityName": "pais",
+      "otherEntityRelationshipName": "clasificaciones",
+      "relationshipName": "paisOrigen",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "nombrePais",
+      "otherEntityName": "pais",
+      "otherEntityRelationshipName": "clasificaciones",
+      "relationshipName": "paisDestino",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "nombreDivisa",
+      "otherEntityName": "divisa",
+      "otherEntityRelationshipName": "clasificaciones",
+      "relationshipName": "divisa",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "nombre",
+      "otherEntityName": "idioma",
+      "otherEntityRelationshipName": "clasificaciones",
+      "relationshipName": "idioma",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "nombre",
+      "otherEntityName": "cliente",
+      "otherEntityRelationshipName": "clasificaciones",
+      "relationshipName": "refCliente",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "nombreProvincia",
+      "otherEntityName": "provincia",
+      "otherEntityRelationshipName": "clasificaciones",
+      "relationshipName": "provinciaDestino",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "nombre",
+      "otherEntityName": "remitente",
+      "otherEntityRelationshipName": "clasificaciones",
+      "relationshipName": "idRemitente",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "nombre",
+      "otherEntityName": "destinatario",
+      "otherEntityRelationshipName": "clasificaciones",
+      "relationshipName": "idDestinatario",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

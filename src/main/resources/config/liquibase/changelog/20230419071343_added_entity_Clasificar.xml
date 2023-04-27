@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Clasificar.
+    -->
+    <changeSet id="20230419071343-1" author="jhipster">
+        <createTable tableName="clasificar">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="descripcion" type="varchar(250)">
+                <constraints nullable="false" />
+            </column>
+            <column name="cliente" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="remitente" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="destinatario" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="proveedor" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="codigo_arancelario_origen" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="importe" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="uds" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="peso" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="pais_origen_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="pais_destino_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="divisa_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="idioma_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="ref_cliente_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="provincia_destino_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_remitente_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_destinatario_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20230419071343-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/clasificar.csv"
+                  separator=";"
+                  tableName="clasificar"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="descripcion" type="string"/>
+            <column name="cliente" type="string"/>
+            <column name="remitente" type="string"/>
+            <column name="destinatario" type="string"/>
+            <column name="proveedor" type="string"/>
+            <column name="codigo_arancelario_origen" type="string"/>
+            <column name="importe" type="numeric"/>
+            <column name="uds" type="numeric"/>
+            <column name="peso" type="numeric"/>
+            <column name="pais_origen_id" type="numeric"/>
+            <column name="pais_destino_id" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

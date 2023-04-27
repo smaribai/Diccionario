@@ -1,0 +1,33 @@
+{
+  "diccionarioApp": {
+    "clasificaciones": {
+      "home": {
+        "title": "Clasificaciones",
+        "refreshListLabel": "Refresh list",
+        "notFound": "No Clasificaciones found"
+      },
+      "detail": {
+        "title": "Clasificaciones"
+      },
+      "id": "ID",
+      "descripcion": "Descripcion",
+      "cliente": "Cliente",
+      "remitente": "Remitente",
+      "destinatario": "Destinatario",
+      "proveedor": "Proveedor",
+      "codigoArancelarioOrigen": "Codigo Arancelario Origen",
+      "importe": "Importe",
+      "uds": "Uds",
+      "peso": "Peso",
+      "codigoArancelarioObtenido": "Codigo Arancelario Obtenido",
+      "paisOrigen": "Pais Origen",
+      "paisDestino": "Pais Destino",
+      "divisa": "Divisa",
+      "idioma": "Idioma",
+      "refCliente": "Ref Cliente",
+      "provinciaDestino": "Provincia Destino",
+      "idRemitente": "Id Remitente",
+      "idDestinatario": "Id Destinatario"
+    }
+  }
+}

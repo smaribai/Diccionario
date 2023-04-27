@@ -1,0 +1,27 @@
+{
+  "diccionarioApp": {
+    "remitente": {
+      "home": {
+        "title": "Remitentes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Remitente",
+        "createOrEditLabel": "Create or edit a Remitente",
+        "notFound": "No Remitentes found"
+      },
+      "created": "A new Remitente is created with identifier {{ param }}",
+      "updated": "A Remitente is updated with identifier {{ param }}",
+      "deleted": "A Remitente is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Remitente {{ id }}?"
+      },
+      "detail": {
+        "title": "Remitente"
+      },
+      "id": "ID",
+      "idRemitente": "Id Remitente",
+      "nombre": "Nombre",
+      "descripcion": "Descripcion",
+      "direccion": "Direccion"
+    }
+  }
+}
