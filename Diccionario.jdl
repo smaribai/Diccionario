@@ -1,0 +1,173 @@
+application {
+  config {
+    applicationType monolith
+    authenticationType jwt
+    baseName Diccionario
+    //blueprints []
+    buildTool maven
+    cacheProvider ehcache
+    clientFramework react
+    clientPackageManager npm
+    clientTheme lux
+    clientThemeVariant primary
+    creationTimestamp 1681887883769
+    databaseType sql
+    devDatabaseType postgresql
+    dtoSuffix DTO
+    enableHibernateCache true
+    enableSwaggerCodegen true
+    enableTranslation true
+    jhiPrefix jhi
+    jhipsterVersion "7.8.1"
+    jwtSecretKey "OWViYTM3YTcwZDU5OTc5ZWNiODQ0ZDAwMzMwYmE4YjYzMWVmMDRiMDU0ZmJiNzNlY2YzYjVkMGEwYzE0YWY5ZDRhNjlkYTYzY2NmOGVmN2RmMmUwMDkyZDNmZDgwYjIwZDEwZmExNzM4NDVjMWE2NjkxZTJiYmUwNTY1ZjRkNTE="
+    languages [es, en]
+    messageBroker false
+    nativeLanguage es
+    otherModules []
+    packageName com.santi.diccionario
+    prodDatabaseType postgresql
+    reactive false
+    searchEngine false
+    serverPort 8080
+    serviceDiscoveryType eureka
+    skipUserManagement false
+    websocket false    
+  }
+
+  entities *
+}
+
+entity Traduccion (traduccion) {
+  textoOrigen String required maxlength(150)
+  textoDestino String required maxlength(150)
+}
+
+entity Cliente (cliente) {
+  idCliente String maxlength(20) unique
+  nombre String required maxlength(70) unique
+  descripcion String maxlength(200)
+  direccion String maxlength(200)
+}
+
+entity Remitente (remitente) {
+  idRemitente String required maxlength(20) unique
+  nombre String required maxlength(70) unique
+  descripcion String maxlength(200)
+  direccion String maxlength(200)
+}
+
+entity Destinatario (destinatario) {
+  idDestinatario String required maxlength(20) unique
+  nombre String required maxlength(70) unique
+  descripcion String maxlength(200)
+  direccion String maxlength(200)
+}
+
+entity Control (control) {
+  nombre String unique
+  descripcion String
+}
+
+entity Provincia (provincia) {
+  codigoProvincia String required minlength(3) maxlength(3) unique
+  nombreProvincia String required maxlength(30) unique
+  
+}
+
+entity Divisa (divisa) {
+  codigoDivisa String required minlength(3) maxlength(3) unique
+  nombreDivisa String required maxlength(100) unique
+}
+
+@readOnly
+entity Clasificaciones (historico_clasificaciones) {
+  descripcion String required maxlength(250)
+  cliente String maxlength(100)
+  remitente String maxlength(100)
+  destinatario String maxlength(200)
+  proveedor String maxlength(200)
+  codigoArancelarioOrigen String maxlength(20)
+  importe Double 
+  uds Integer
+  peso Double
+  codigoArancelarioObtenido String maxlength(20)  
+}
+
+entity Clasificar  {
+  descripcion String required maxlength(250)
+  cliente String maxlength(100)
+  remitente String maxlength(100)
+  destinatario String maxlength(200)
+  proveedor String maxlength(200)
+  codigoArancelarioOrigen String maxlength(20)
+  importe Double 
+  uds Integer
+  peso Double
+}
+
+entity Idioma {
+  codigo String required maxlength(2) unique
+  nombre String required maxlength(100) unique 
+}
+
+entity Pais {
+ codigoPais String required maxlength(2) unique
+ nombrePais String required maxlength(100) unique 
+}
+
+entity Producto {
+  codigoArancelario String required maxlength(20) unique
+  nivel Integer
+  CNCode String maxlength(15)
+  longitudCNCode Integer
+  descripcion String required maxlength(2000)
+}
+
+entity ProductoControles (controles_producto) {
+  descripcion String maxlength(200)
+}
+
+entity TipoCliente {
+  codigo String required maxlength(5) unique
+  nombre String required maxlength(100) unique
+}
+
+relationship ManyToOne {
+  Cliente{tipoCliente(nombre) required} to TipoCliente
+  Cliente{pais(codigoPais) required} to Pais 
+  Clasificaciones{paisOrigen(nombrePais) required} to Pais 
+  Clasificaciones{paisDestino(nombrePais) required} to Pais 
+  Clasificaciones{divisa(nombreDivisa)} to Divisa 
+  Clasificaciones{idioma(nombre)} to Idioma
+  Clasificaciones{refCliente(nombre)} to Cliente
+  Clasificaciones{provinciaDestino(nombreProvincia)} to Provincia
+  Clasificaciones{idRemitente(nombre)} to Remitente
+  Clasificaciones{idDestinatario(nombre)} to Destinatario
+  ProductoControles{codigoArancelario(codigoArancelario) required} to Producto
+  ProductoControles{idControl(nombre) required} to Control
+  Traduccion{idiomaOrigen(nombre) required} to Idioma
+  Traduccion{idiomaDestino(nombre) required} to Idioma
+  Clasificar{paisOrigen(nombrePais) required} to Pais 
+  Clasificar{paisDestino(nombrePais) required} to Pais 
+  Clasificar{divisa(nombreDivisa)} to Divisa 
+  Clasificar{idioma(nombre)} to Idioma
+  Clasificar{refCliente(nombre)} to Cliente
+  Clasificar{provinciaDestino(nombreProvincia)} to Provincia
+  Clasificar{idRemitente(nombre)} to Remitente
+  Clasificar{idDestinatario(nombre)} to Destinatario
+}
+
+relationship ManyToOne {
+    Producto{parent(codigoArancelario)} to Producto
+}
+
+
+filter *
+
+dto * with mapstruct
+
+paginate Cliente, Control, Divisa, Idioma, Pais, TipoCliente with pagination
+
+paginate Clasificaciones, Producto, ProductoControles, Provincia with infinite-scroll
+
+service * with serviceImpl
