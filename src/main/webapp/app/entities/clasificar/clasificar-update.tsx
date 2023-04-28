@@ -1,30 +1,19 @@
-import React, { useState, useEffect, FormEvent } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Row, Col, FormText } from 'reactstrap';
-import { isNumber, Translate, translate, ValidatedField, ValidatedForm } from 'react-jhipster';
+import { Translate, translate, ValidatedField, ValidatedForm } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
-import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IPais } from 'app/shared/model/pais.model';
 import { getEntities as getPais } from 'app/entities/pais/pais.reducer';
-import { IDivisa } from 'app/shared/model/divisa.model';
 import { getEntities as getDivisas } from 'app/entities/divisa/divisa.reducer';
-import { IIdioma } from 'app/shared/model/idioma.model';
 import { getEntities as getIdiomas } from 'app/entities/idioma/idioma.reducer';
-import { ICliente } from 'app/shared/model/cliente.model';
 import { getEntities as getClientes } from 'app/entities/cliente/cliente.reducer';
-import { IProvincia } from 'app/shared/model/provincia.model';
 import { getEntities as getProvincias } from 'app/entities/provincia/provincia.reducer';
-import { IRemitente } from 'app/shared/model/remitente.model';
 import { getEntities as getRemitentes } from 'app/entities/remitente/remitente.reducer';
-import { IDestinatario } from 'app/shared/model/destinatario.model';
 import { getEntities as getDestinatarios } from 'app/entities/destinatario/destinatario.reducer';
-import { IClasificar } from 'app/shared/model/clasificar.model';
-import { getEntity, updateEntity, createEntity, reset, getClasificacion } from './clasificar.reducer';
-import { unwrapResult } from '@reduxjs/toolkit/dist/createAsyncThunk';
+import { reset, getClasificacion } from './clasificar.reducer';
 
 export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => {
   const dispatch = useAppDispatch();
@@ -63,15 +52,6 @@ export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => 
     dispatch(getDestinatarios({}));
   }, []);
 
-  {
-    /*  useEffect(() => {
-    if (updateSuccess) {
-      handleClose();
-    }
-  }, [updateSuccess]);
-  */
-  }
-
   const saveEntity = async values => {
     const entity = {
       ...clasificarEntity,
@@ -90,7 +70,6 @@ export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => 
     const payload = JSON.stringify(respuesta.payload);
     const dataJson = JSON.parse(payload);
     const data = dataJson.data;
-
     setRespuestaApi(JSON.stringify(data));
   };
 
@@ -114,7 +93,7 @@ export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => 
       <Row className="justify-content-center">
         <Col md="8">
           <h2 id="diccionarioApp.clasificar.home.createOrEditLabel" data-cy="ClasificarCreateUpdateHeading">
-            <Translate contentKey="diccionarioApp.clasificar.home.createOrEditLabel">Create or edit a Clasificar</Translate>
+            <Translate contentKey="diccionarioApp.clasificar.home.createOrEditLabel">Clasificar</Translate>
           </h2>
         </Col>
       </Row>
@@ -362,10 +341,13 @@ export const ClasificarUpdate = (props: RouteComponentProps<{ id: string }>) => 
             </ValidatedForm>
           )}
         </Col>
-        <Col md="8">
-          <div id="respuesta">
-            <PanelTexto texto={respuestaApi} />
-          </div>
+        <Col md="4">
+          <Col>
+            <div id="respuesta">
+              <h2>Clasificación Propuesta</h2>
+              <PanelTexto texto={respuestaApi} />
+            </div>
+          </Col>
         </Col>
       </Row>
     </div>
