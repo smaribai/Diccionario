@@ -6,7 +6,7 @@
       "home": "Home",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entities",
+        "main": "Operations",
         "traduccion": "Traduccion",
         "cliente": "Cliente",
         "remitente": "Remitente",
@@ -15,7 +15,7 @@
         "provincia": "Provincia",
         "divisa": "Divisa",
         "clasificaciones": "Clasificaciones",
-        "clasificar": "Clasificar",
+        "clasificar": "Get_Classification",
         "idioma": "Idioma",
         "pais": "Pais",
         "producto": "Producto",
