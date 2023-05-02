@@ -5,7 +5,7 @@
         "title": "Clasificars",
         "refreshListLabel": "Refrescar lista",
         "createLabel": "Crear nuevo Clasificar",
-        "createOrEditLabel": "Crear o editar Clasificar",
+        "createOrEditLabel": "Obtener clasificación",
         "notFound": "Ningún Clasificars encontrado"
       },
       "created": "Un nuevo Clasificar ha sido creado con el identificador {{ param }}",
